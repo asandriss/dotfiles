@@ -1,0 +1,41 @@
+take 10 infiniteLst 
+let infiniteLst = [13,26..]
+'A':" Small Cat"
+"hello" ++ " " ++ "world"
+[1,2] ++ [2,4]
+lostNumbers 
+let lostNumbers = [4,8,15,16,23,42]
+doubleSmallNumber 100
+doubleSmallNumber 101
+doubleSmallNumber 99
+doubleSmallNumber 3
+:l baby
+doubleSmallNumber 101
+doubleSmallNumber 99
+doubleSmallNumber 3
+:l baby
+doubleUs 4 9
+:l baby
+doubleUs 4 9
+doubleUs 3 4
+:l baby
+:q
+doubleMe 5.3
+doubleme 8
+doubleMe 8
+dobuleMe 8
+:l baby
+:1 baby
+:q
+doubleMe x = x + x
+92 `div` 10
+div 92 10
+min 10 15
+succ 9
+succ 8
+5 == True
+5 == true
+:q
+quit
+help
+1+1
