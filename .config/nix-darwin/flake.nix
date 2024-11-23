@@ -15,8 +15,18 @@
       environment.systemPackages =
         [ 
             pkgs.neovim
-            pkgs.tmux
             pkgs.go
+            pkgs.wezterm
+            pkgs.tmux
+        ];
+
+      fonts.packages =
+        [
+            (pkgs.nerdfonts.override {fonts = 
+                [
+                    "JetBrainsMono"
+                    "InconsolataGo"
+                ]; })
         ];
 
       # Necessary for using flakes on this system.
