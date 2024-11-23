@@ -4,7 +4,6 @@ local km = vim.keymap
 
 -- general
 km.set("i", "jk", "<ESC>") -- typing j and k in short sequence will switch to normal mode (behave like ESC)
-
 km.set("n", "<leader>nh", ":nohl<CR>") -- in normal mode, typing space+nh will clear all hightlights (from search)
 
 km.set("n", "<leader>+", "<C-a>")      -- in normal mode, selecting a number and pressing SPACE+ will increment the value
@@ -31,3 +30,8 @@ km.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in curr
 km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 km.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 km.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+km.set("n", "<leader>t", "<cmd>FloatermToggle<cr>") -- toggle floating terminal window
+km.set("t", "<leader>t", "<cmd>:FloatermToggle<CR>")
+
+

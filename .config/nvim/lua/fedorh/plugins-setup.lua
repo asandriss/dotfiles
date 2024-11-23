@@ -51,6 +51,8 @@ return packer.startup(function(use)
     --status line
     use("nvim-lualine/lualine.nvim")
 
+    use 'voldikss/vim-floaterm'  -- floating terminal window
+
     -- telescope fuzzy find
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
     use({ "nvim-telescope/telescope.nvim", branch="0.1.x" })

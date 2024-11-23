@@ -178,3 +178,4 @@ eval "$(zoxide init zsh)"
 alias cd=z
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:$HOME/go/bin

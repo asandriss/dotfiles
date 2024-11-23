@@ -16,6 +16,7 @@
         [ 
             pkgs.neovim
             pkgs.tmux
+            pkgs.go
         ];
 
       # Necessary for using flakes on this system.
