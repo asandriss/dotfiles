@@ -22,6 +22,9 @@
             pkgs.mkalias
             pkgs.wezterm
             pkgs.tmux
+            pkgs.fzf
+            pkgs.eza
+            pkgs.zoxide
         ];
 
       fonts.packages =
