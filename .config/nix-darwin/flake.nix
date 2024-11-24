@@ -23,7 +23,9 @@
             pkgs.wezterm
             
             # Command line packages
+            pkgs.tree
             pkgs.fzf
+            pkgs.ripgrep
             pkgs.eza
             pkgs.delta
             pkgs.zoxide
