@@ -21,9 +21,11 @@
             pkgs.obsidian
             pkgs.mkalias
             pkgs.wezterm
-            pkgs.tmux
+            
+            # Command line packages
             pkgs.fzf
             pkgs.eza
+            pkgs.delta
             pkgs.zoxide
         ];
 
