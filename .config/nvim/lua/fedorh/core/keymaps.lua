@@ -3,12 +3,12 @@ vim.g.mapleader = " "   -- set space as leader key (default is backslash)
 local km = vim.keymap
 
 -- general
-km.set("i", "jk", "<ESC>") -- typing j and k in short sequence will switch to normal mode (behave like ESC)
-km.set("n", "<leader>nh", ":nohl<CR>") -- in normal mode, typing space+nh will clear all hightlights (from search)
+km.set("i", "jk", "<ESC>", {desc = "Exit insert mode with jk"}) 
+km.set("n", "<leader>nh", ":nohl<CR>", {desc = "Clear search highlights"}) 
 
-km.set("n", "<leader>+", "<C-a>")      -- in normal mode, selecting a number and pressing SPACE+ will increment the value
-km.set("n", "<leader>=", "<C-a>")      -- in normal mode, selecting a number and pressing SPACE= will increment the value (to avoid shift key)
-km.set("n", "<leader>-", "<C-x>")      -- in normal mode, selecting a number and pressing SPACE- will decrement the value
+km.set("n", "<leader>+", "<C-a>")
+km.set("n", "<leader>=", "<C-a>")
+km.set("n", "<leader>-", "<C-x>")
 
 -- windows and tabs management
 km.set("n", "<leader>sv", "<C-w>v") -- split window vertically

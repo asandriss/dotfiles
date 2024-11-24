@@ -1,3 +1,5 @@
+vim.cmd("let g:netrw_liststyle = 3")
+
 local o = vim.opt
 
 -- line numbers
@@ -5,8 +7,8 @@ o.number = true
 o.relativenumber = true
 
 -- tabs and indentation
-o.tabstop = 4
-o.shiftwidth = 4
+o.tabstop = 2
+o.shiftwidth = 2
 o.expandtab = true
 o.autoindent = true
 
@@ -17,7 +19,6 @@ o.wrap = false
 o.ignorecase = true -- ignore case by default
 o.smartcase = true  -- if upper case letters are used in search, match the case
 
--- cursor line ### not sure about this!
 o.cursorline = true
 
 -- appearance
