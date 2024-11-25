@@ -25,6 +25,7 @@
             
             # Command line packages
             pkgs.tree
+            pkgs.lazygit
             pkgs.fzf
             pkgs.ripgrep
             pkgs.eza
