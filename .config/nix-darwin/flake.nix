@@ -19,6 +19,7 @@
             pkgs.neovim
             pkgs.go
             pkgs.obsidian
+            pkgs.pyright
             pkgs.mkalias
             pkgs.wezterm
             
