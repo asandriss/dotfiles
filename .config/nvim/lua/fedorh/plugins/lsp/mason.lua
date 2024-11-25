@@ -1,41 +1,55 @@
 return {
-  "williamboman/mason.nvim",
-  dependencies = {
-    "williamboman/mason-lspconfig.nvim",
-  },
-  config = function()
-    -- import mason
-    local mason = require("mason")
+	"williamboman/mason.nvim",
+	dependencies = {
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	},
 
-    -- import mason-lspconfig
-    local mason_lspconfig = require("mason-lspconfig")
+	config = function()
+		-- import mason
+		local mason = require("mason")
 
-    -- enable mason and configure icons
-    mason.setup({
-      ui = {
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
-        },
-      },
-    })
+		-- import mason-lspconfig
+		local mason_lspconfig = require("mason-lspconfig")
+		local mason_tool_installer = require("mason-tool-installer")
 
-    mason_lspconfig.setup({
-      -- list of servers for mason to install
-      ensure_installed = {
-        "html",
-        "cssls",
-        "lua_ls",
-        "omnisharp",
-       "ast_grep",  -- go
-        "gopls",     -- official go, requires installation `go install -v golang.org/x/tools/gopls@latest` 
-       "harper_ls",
-        "graphql",
-        "emmet_ls",
-        "prismals",
-        -- "pyright",
-      },
-    })
-  end,
+		-- enable mason and configure icons
+		mason.setup({
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+		})
+
+		mason_lspconfig.setup({
+			-- list of servers for mason to install
+			ensure_installed = {
+				"html",
+				"cssls",
+				"lua_ls",
+				"omnisharp",
+				"ast_grep", -- go
+				"gopls", -- official go, requires installation `go install -v golang.org/x/tools/gopls@latest`
+				"harper_ls",
+				"graphql",
+				"emmet_ls",
+				"prismals",
+				-- "pyright",
+			},
+		})
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"prettier", -- prettier formatter
+				"stylua", -- lua formatter
+				"isort", -- python formatter
+				"black", -- python formatter
+				"pylint", -- python linter
+				"eslint_d", -- general web linter
+				"golangci-lint", -- golang lint
+			},
+		})
+	end,
 }
