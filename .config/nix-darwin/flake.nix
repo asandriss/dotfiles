@@ -28,9 +28,12 @@
             pkgs.bat
             pkgs.tree
             pkgs.lazygit
+            pkgs.fd
             pkgs.fzf
             pkgs.ripgrep
-	    pkgs.stow
+            pkgs.thefuck
+            pkgs.starship
+            pkgs.stow
             pkgs.eza
             pkgs.delta
             pkgs.zoxide

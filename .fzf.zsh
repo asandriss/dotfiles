@@ -10,6 +10,6 @@ fi
 
 # Key bindings
 # ------------
-#source "${FZF_PATH}/shell/key-bindings.zsh"
-source "/Users/fedorhajdu/.oh-my-zsh/lib/key-bindings.zsh"
+# source "${FZF_PATH}/shell/key-bindings.zsh"
+# source "/Users/fedorhajdu/.oh-my-zsh/lib/key-bindings.zsh"
 
