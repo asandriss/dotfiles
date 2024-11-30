@@ -17,7 +17,7 @@ o.wrap = false
 
 -- search
 o.ignorecase = true -- ignore case by default
-o.smartcase = true  -- if upper case letters are used in search, match the case
+o.smartcase = true -- if upper case letters are used in search, match the case
 
 o.cursorline = true
 
@@ -30,11 +30,21 @@ o.signcolumn = "yes"
 o.backspace = "indent,eol,start"
 
 -- clipboard
-o.clipboard:append("unnamedplus")   -- this should make "yank" send to default clipboard
+o.clipboard:append("unnamedplus") -- this should make "yank" send to default clipboard
 
 -- split (always split to the right and below)
 o.splitright = true
 o.splitbelow = true
 
 -- keywords
-o.iskeyword:append("-")  -- dashed words are considered one word
+o.iskeyword:append("-") -- dashed words are considered one word
+
+-- warp text for markdown files only.
+vim.api.nvim_create_augroup("MarkdownWrap", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "MarkdownWrap",
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.wrap = true
+  end,
+})

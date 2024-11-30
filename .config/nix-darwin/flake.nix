@@ -21,12 +21,13 @@
             pkgs.obsidian
             pkgs.nodejs_22
             pkgs.pyright
-            pkgs.mkalias
             pkgs.wezterm
-            
+            pkgs.jetbrains.rider
+
             # Command line packages
             pkgs.bat
             pkgs.tree
+            pkgs.mkalias
             pkgs.lazygit
             pkgs.fd
             pkgs.fzf
