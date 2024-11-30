@@ -1,6 +1,3 @@
-alias cat='bat'
-alias lg='lazygit'
-
 # [ -f "/Users/fedorhajdu/.ghcup/env" ] && source "/Users/fedorhajdu/.ghcup/env" # ghcup-env
 
 # ---- FZF -----
@@ -67,3 +64,17 @@ alias cd=z
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$PATH:$HOME/go/bin
+# ---------
+# END OF FZF Settings
+#
+
+# ----------------
+# ALIASES
+alias cat='bat'
+alias lg='lazygit'
+
+
+# ----------------
+# Starship prompt settings
+# 
+eval "$(starship init zsh)"
