@@ -19,15 +19,18 @@
             pkgs.neovim
             pkgs.go
             pkgs.obsidian
+            pkgs.nodejs_22
             pkgs.pyright
             pkgs.mkalias
             pkgs.wezterm
             
             # Command line packages
+            pkgs.bat
             pkgs.tree
             pkgs.lazygit
             pkgs.fzf
             pkgs.ripgrep
+	    pkgs.stow
             pkgs.eza
             pkgs.delta
             pkgs.zoxide
@@ -77,17 +80,18 @@
       system.stateVersion = 5;
 
       # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "x86_64-darwin";
+      #  nixpkgs.hostPlatform = "x86_64-darwin";
+      nixpkgs.hostPlatform = "aarch64-darwin" ;
     };
   in
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Fedors-MacBook-Pro
-    darwinConfigurations."Fedors-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Fedors-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Fedors-MacBook-Pro".pkgs;
+    darwinPackages = self.darwinConfigurations."Fedors-MacBook-Air".pkgs;
   };
 }
