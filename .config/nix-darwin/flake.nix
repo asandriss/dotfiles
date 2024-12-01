@@ -39,15 +39,19 @@
             pkgs.eza
             pkgs.delta
             pkgs.zoxide
+
         ];
 
       fonts.packages =
         [
-            (pkgs.nerdfonts.override {fonts = 
-                [
-                    "JetBrainsMono"
-                    "InconsolataGo"
-                ]; })
+            # Legacy way of installing packages
+            # (pkgs.nerdfonts.override {fonts = 
+            #     [
+            #         "JetBrainsMono"
+            #         "InconsolataGo"
+            #     ]; })
+            pkgs.nerd-fonts.jetbrains-mono
+            pkgs.nerd-fonts.inconsolata-go
         ];
 
       # Code necessary to add GUI applications to MacOS Spotlight Search
