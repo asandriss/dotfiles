@@ -22,6 +22,7 @@
             pkgs.nodejs_22
             pkgs.pyright
             pkgs.wezterm
+            pkgs.dotnet-sdk
             pkgs.jetbrains.rider
 
             # Command line packages
