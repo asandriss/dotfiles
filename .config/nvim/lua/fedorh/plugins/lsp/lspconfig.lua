@@ -91,26 +91,40 @@ return {
           filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
         })
       end,
+      -- ["golangci-lint"] = function()
+      --   lspconfig["golangci_lint_ls"].setup({
+      --     capabilities = capabilities,
+      --     cmd = { "golangci-lint", "run", "--out-format", "json" },
+      --     filetypes = { "go" },
+      --     root_dir = util.root_pattern(".git", "go.mod"),
+      --     init_options = {
+      --       command = { "golangci-lint" },
+      --     },
+      --     on_attach = function(client, bufnr)
+      --       print("Golangci-lint is attached to buffer " .. bufnr)
+      --     end,
+      --   })
+      -- end,
       ["gopls"] = function()
         lspconfig["gopls"].setup({
           capabilities = capabilities,
-          filetypes = {"go", "gomod", "gowork", "gotmpl"}
+          filetypes = { "go", "gomod", "gowork", "gotmpl" },
         })
       end,
       ["pyright"] = function()
         lspconfig["pyright"].setup({
           cmd = { "/run/current-system/sw/bin/pyright-langserver", "--stdio" }, -- Command to start the Pyright language server
           capabilities = capabilities,
-          filetypes = {"python", "py"},
+          filetypes = { "python", "py" },
           settings = {
             python = {
               analysis = {
                 autoSearchPaths = true,
                 diagnosticMode = "openFilesOnly",
-                useLibraryCodeForTypes = true
-              }
-            }
-          }
+                useLibraryCodeForTypes = true,
+              },
+            },
+          },
         })
       end,
       ["emmet_ls"] = function()
@@ -120,6 +134,7 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
+
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({

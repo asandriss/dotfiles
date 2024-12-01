@@ -17,6 +17,7 @@
       environment.systemPackages =
         [ 
             pkgs.neovim
+            pkgs.golangci-lint
             pkgs.go
             pkgs.obsidian
             pkgs.nodejs_22
