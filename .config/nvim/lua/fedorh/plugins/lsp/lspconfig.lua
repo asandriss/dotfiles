@@ -108,7 +108,11 @@ return {
       ["gopls"] = function()
         lspconfig["gopls"].setup({
           capabilities = capabilities,
+          cmd = { "gopls" },
           filetypes = { "go", "gomod", "gowork", "gotmpl" },
+          settings = {
+            usePlaceholders = true,
+          },
         })
       end,
       ["pyright"] = function()

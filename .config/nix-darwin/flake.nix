@@ -19,16 +19,18 @@
             pkgs.neovim
             pkgs.golangci-lint
             pkgs.go
-            pkgs.obsidian
             pkgs.nodejs_22
             pkgs.pyright
+
+            # GUI Applications
+            pkgs.obsidian
             pkgs.wezterm
-            pkgs.dotnet-sdk
             pkgs.jetbrains.rider
 
             # Command line packages
             pkgs.bat
             pkgs.tree
+            pkgs.dotnet-sdk
             pkgs.mkalias
             pkgs.lazygit
             pkgs.fd
@@ -40,8 +42,8 @@
             pkgs.eza
             pkgs.delta
             pkgs.zoxide
-
-        ];
+            pkgs.codecrafters-cli
+            ];
 
       fonts.packages =
         [

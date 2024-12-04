@@ -33,7 +33,7 @@ return {
         "omnisharp",
         "ast_grep", -- go
         "gopls", -- official go, requires installation `go install -v golang.org/x/tools/gopls@latest`
-        "harper_ls",
+        -- "harper_ls",
         "graphql",
         "emmet_ls",
         "prismals",
