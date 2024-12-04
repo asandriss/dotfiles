@@ -10,6 +10,8 @@ km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 km.set("n", "<leader>+", "<C-x>", { desc = "Increment number under cursor" })
 km.set("n", "<leader>-", "<C-a>", { desc = "Decrement number under cursor" })
+km.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll half page down" })
+km.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll half page up" })
 
 -- windows and tabs management
 km.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically

@@ -8,7 +8,7 @@ return {
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
-    
+
     -- run motions after 's' to paste over. for example sw would replace the current word
     -- s$ would remove everything till the end of the line and paste in the content
     vim.keymap.set("n", "s", substitute.operator, { desc = "Substitute with motion" })
