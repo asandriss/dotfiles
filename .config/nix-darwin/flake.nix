@@ -42,6 +42,9 @@
             pkgs.eza
             pkgs.delta
             pkgs.zoxide
+            pkgs.gnupg
+            pkgs.pass
+            pkgs.xclip
             pkgs.codecrafters-cli
             ];
 
