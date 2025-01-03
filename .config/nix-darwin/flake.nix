@@ -30,6 +30,7 @@
             # Command line packages
             pkgs.bat
             pkgs.tree
+            pkgs.dotnet-sdk_9
             pkgs.dotnet-sdk
             pkgs.mkalias
             pkgs.lazygit

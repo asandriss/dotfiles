@@ -75,6 +75,12 @@ alias lg='lazygit'
 
 
 # ----------------
+# ENV SETUP 
+export EDITOR=nvim
+export VISUAL=nvim
+export DISPLAY=<x11-server-ip>:0
+
+# ----------------
 # Starship prompt settings
 # 
 eval "$(starship init zsh)"
