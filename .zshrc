@@ -84,3 +84,6 @@ export DISPLAY=<x11-server-ip>:0
 # Starship prompt settings
 # 
 eval "$(starship init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
