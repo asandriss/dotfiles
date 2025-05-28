@@ -21,7 +21,11 @@
             pkgs.go
             pkgs.nodejs_22
             pkgs.pyright
-
+            pkgs.nodejs_22
+            pkgs.nodePackages.npm
+            pkgs.nodePackages.typescript
+            pkgs.vscode
+                        
             # GUI Applications
             pkgs.obsidian
             pkgs.wezterm
