@@ -24,6 +24,7 @@
             pkgs.nodejs_22
             pkgs.nodePackages.npm
             pkgs.nodePackages.typescript
+            pkgs.python311
             pkgs.vscode
                         
             # GUI Applications
