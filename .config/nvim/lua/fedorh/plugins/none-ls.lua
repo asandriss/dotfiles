@@ -1,9 +1,8 @@
 return {
-  "jose-elias-alvarez/null-ls.nvim",
+  "nvimtools/none-ls.nvim",
   dependencies = {
-    "nnvim-lua/plenary.nvim",
+    "nvim-lua/plenary.nvim",
   },
-  -- ft = "go",
   config = function()
     local null_ls = require("null-ls")
 
@@ -13,8 +12,5 @@ return {
         null_ls.builtins.formatting.goimports_reviser,
       },
     })
-    -- sources = {
-    --   null_ls.builtins.formatting.gofumjjt,
-    -- },
   end,
 }
