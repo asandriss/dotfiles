@@ -19,7 +19,23 @@ return {
         local opts = { buffer = ev.buf, silent = true }
 
         opts.desc = "Show LSP references"
-        keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+        -- keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+        -- vim.keymap.set("n", "gR", function()
+        --   require("telescope.builtin").lsp_references({
+        --     default_text = nil,
+        --   })
+        -- end, { desc = "LSP References (clean)" })
+        -- keymap.set("n", "gR", function()
+        --   local word = vim.fn.expand("<cword>")
+        --   require("telescope.builtin").lsp_references({ default_text = word })
+        -- end, opts)
+
+        keymap.set("n", "gR", function()
+          vim.schedule(function()
+            require("telescope.builtin").lsp_references()
+          end)
+        end, { desc = "LSP References" })
+
         opts.desc = "Go to declaration"
         keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
         opts.desc = "Show LSP definitions"

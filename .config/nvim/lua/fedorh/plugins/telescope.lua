@@ -23,7 +23,20 @@ return {
         },
       },
     })
+    -- Disable interfering plugins in TelescopePrompt buffers
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "TelescopePrompt",
+      callback = function()
+        -- Disable nvim-cmp
+        local ok_cmp, cmp = pcall(require, "cmp")
+        if ok_cmp then
+          cmp.setup.buffer({ enabled = false })
+        end
 
+        -- Disable autopairs
+        vim.b.autopairs_enabled = false
+      end,
+    })
     telescope.load_extension("fzf")
 
     -- set keymaps
