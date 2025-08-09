@@ -29,3 +29,13 @@ km.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in curr
 km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 km.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 km.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- toggle terminal
+km.set("n", "<C-\\>", function()
+  local term_buf = vim.fn.bufnr("term://*")
+  if term_buf ~= -1 then
+    vim.cmd("b" .. term_buf)
+  else
+    vim.cmd("split | terminal")
+  end
+end, { desc = "Toggle terminal" })
